@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .background-blur {
+            background: url('photo\ 1.jpg') rgba(0, 0, 0, 0.7);
+            background-size: cover;
+            background-blend-mode: darken;
+
+        }
+
+        .transparent-back {
+            background: url('photo\ 1.jpg') rgba(0, 0, 0, 0.4);
+            background-size: cover;
+            background-blend-mode: soft-light;
+
+        }
+
+        .navbar-border-radius {
+
+            border: 3px thin #f1f1;
+            border-radius: 3px;
+
+        }
+
+        .border-shadow {
+            box-shadow: 0 1.25rem 2rem rgba(0, 0, 0, 0.4);
+        }
+
+        .nav-bar-border-shadow {
+            box-shadow: 0 0.125rem 2rem rgba(0, 0, 0, 0.7);
+        }
+
+        .d-flex img {
+            width: 35px;
+            height: 25px;
+            margin: auto;
+            padding-left: 2px;
+        }
+
+        .search-btn {
+            color: #5f1055;
+            float: right;
+            width: 60px;
+            height: 40px;
+            border-radius: 50%;
+            background: url('');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 20px;
+            padding-left: 5px;
+        }
+
+        .search-txt {
+            border: none;
+            background: url('photo\ 1.jpg') rgba(0, 0, 0, 0.4);
+            background-size: cover;
+            background-blend-mode: darken;
+            outline: none;
+            float: left;
+            padding: 0;
+            color: black;
+            font-size: 16px;
+            line-height: 40px;
+            text-indent: 10px;
+            width: 240;
+        }
+
+        .main-content {
+            display: flex;
+            color: white;
+            margin-top: 20px;
+            padding-top: 20px;
+
+
+        }
+
+        .grid-1 {
+            width: 25%;
+
+            /* background: salmon; */
+            overflow-y: scroll;
+            padding-top: 20px;
+            margin-right: 5px;
+
+        }
+
+        .grid-1 a {
+            color: white;
+            text-decoration: none;
+        }
+        .grid-1 h3{
+            
+        }
+        .grid-1 a:hover {
+            color: rgb(255, 0, 136);
+        }
+
+        .grid-2 {
+            width: 55%;
+
+            background: snow;
+            display: flex;
+            flex-direction: column;
+            border: 3px thin;
+            border-radius: 10px;
+            margin-right: 20px;
+            font-size: 14px;
+
+        }
+
+        .grid-3 {
+            width: 20%;
+
+            /* background: skyblue; */
+            box-shadow: 0 .125rem 2rem rgba(0, 0, 0, 0.7);
+            padding-left: 10px;
+            font-size: 14px;
+            overflow-y: scroll;
+        }
+
+        .grid-3 h3 {
+            font-size: 16px;
+        }
+
+        .posts {
+            margin-top: 20px;
+            color: black;
+            padding: 30px 20px 1px 20px;
+        }
+
+        .max-width-1 {
+            max-width: 80%;
+            margin: auto;
+        }
+
+        .post-grid-box-shadow {
+            box-shadow: 0 .150rem 4rem rgba(0, 0, 0, 0.4);
+        }
+
+        .footer p a {
+            text-decoration: none;
+            color: red;
+        }
+
+        .active-page {
+            border-radius: 7px;
+            background: rgb(255, 255, 255);
+            color: black;
+        }
+
+        .item {
+            position: sticky;
+
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px rgb(105, 11, 93);
+            border-radius: 10px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background-image: linear-gradient(180deg, #D0368A 0%, #708AD4 99%);
+            box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+            border-radius: 100px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b30000;
+        }
+
+        .recent-post-boxing {
+            display: block;
+            align-items: center;
+            padding: 20px 5px 0px 5px;
+
+            border-radius: 5px;
+            box-shadow: 0 .125rem 2rem rgba(0, 0, 0, 0.7);
+        }
+
+        .shark-1 {
+
+            top: 0;
+            align-self: flex-start;
+        }
+
+        .shark-2 {
+
+            top: 4rem;
+        }
+
+        .shark-3 {
+            top: 0;
+            align-self: flex-start;
+        }
+
+        .about-me {
+            padding-bottom: 20px;
+            background: cornsilk;
+            border-radius: 5px;
+            box-shadow: 0 .125rem 3rem rgba(0, 0, 0, 0.4);
+        }
+        .blog-links{
+            border-radius: 3px;
+            border: 2px solid deeppink;
+            text-decoration: none;
+        }
+        .blog-links:hover{
+            background: deeppink;
+            color: white;
+        }
+        .side-navbar{
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            padding: 2px;
+        }
+        .side-navbar a{
+            padding: 5px;
+            margin-bottom: 4px;
+            text-decoration: none;
+            background: deeppink;
+            color: white;
+            border-radius: 3px;
+        }
+        .side-navbar a:hover{
+            margin:auto 1px auto 1px ;
+            border: 3px solid white;
+            color: rgb(179, 9, 100);
+        }
+        @media only screen and (max-width: 990px) {
+            .grid-1 {
+                overflow: hidden;
+                width: 0;
+                height: 0;
+            }
+
+            .grid-2 {
+                width: 70%;
+            }
+
+            .grid-3 {
+                width: 30%;
+                overflow-x: hidden;
+                overflow-y: visible;
+            }
+
+            .d-flex img {
+                width: 20$;
+                padding-left: 0;
+
+            }
+
+            .d-flex input {
+                width: 80%;
+            }
+
+            .search-txt {
+                margin-left: -40px;
+                padding-left: 2px;
+            }
+
+            .grid-3 h3 {
+                font-size: 14px;
+            }
+
+            .grid-3 a {
+                padding-left: 0;
+                padding-right: 0;
+                font-size: 12px;
+            }
+
+            .grid-3 img {
+                width: 30px;
+            }
+
+            .main-content {
+                position: sticky;
+                top: 0;
+            }
+
+            .posts {
+
+                color: black;
+                padding: 2px 20px 1px 20px;
+            }
+
+            .posts h3 {
+                font-size: 13px;
+            }
+
+            .posts h5 {
+                font-size: 10px;
+            }
+
+            .posts p {
+                font-size: 8px;
+            }
+
+            .respo-nav {
+                margin-top: 25px;
+            }
+            .side-navbar{
+            flex-direction: column;
+            
+        }
+        .side-navbar a{
+            padding: 2px;
+            margin-bottom: 5px;
+        }
+        .logo{
+            color: deeppink;
+        }
+        .posts img{
+            margin-bottom: 20px;
+        }
+        .posts h3{
+            margin-top: 3px;
+        }
+        }
+    </style>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <title>durjoyZen</title>
+</head>
+
+<body class="background-blur">
+
+    <div class="container border-shadow transparent-back"
+        style="color: white; background-blend-mode: lighten; border:dotted #f1f1; border-radius: 3px;">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-border-radius nav-bar-border-shadow"
+            style=" cursor: pointer; margin-left: -12px; margin-right: -12px;">
+            <div class="container-fluid" style="color: white;">
+                <a class="navbar-brand  href="index.html"
+                    style="font-family: comic sans ms; color: white;">durjoyZen</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 respo-nav " style="color: white; >
+                        <li class=" nav-item" ">
+                            <a class=" nav-link" aria-current="page" href="index.html" style="color: white;">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active-page" href="posts.html">Posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html" style="color: white;">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html" style="color: white;">Contact Us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex box-shadow" style="background: white;">
+                        <img style="" src="https://img.icons8.com/ios-filled/50/000000/search--v1.png" />
+                        <input autofocus style="background: white;" class="search-txt" type="search"
+                            placeholder="Search" aria-label="Search" />
+
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="container post-grid-box-shadow" style=" border-radius: 20px;">
+
+            <div class="main-content ">
+
+                <div class="grid-1 item shark-1 recent-post-boxing">
+                    <h3>Recent Posts</h3>
+                    <a class="blog-links" href="posts.html#featured-recent-post">
+                        <h6 style="color: white;" class="blog-links">click to view recent posts <span class="badge bg-secondary">New</span></h6>
+                    </a>
+                    <p>
+                        Want to learn how to manage your money and want to know <br>
+                        about balance sheet and income statementes management <br>
+                        than visit my Blog <br>
+                        <a class="blog-links" style="color: snow;" href="moneylearner4u.blogspot.com">Money Learner</a>
+                    </p>
+                    <br>
+                    <div>
+                        Want to read and see romantic stories, quotes and photer? Than <br>
+                        visit my another blog. <br>
+                        <a class="blog-links" style="color: white;" href="https://durjoyvaiblogs.blogspot.com">Durjoy Vai Blogs</a>
+                    </div>
+                </div>
+
+                <div class="grid-2 item shark-2 box-shadow">
+                    <div class="posts">
+                        <div class="posts about-me" id="posts">
+                            <h3>Cover photo for facebook</h3>
+                            <h5>July 30, 2021</h5>
+                            <img src="photo 5.jpg" alt="" class="img-fluid">
+                        </div>
+
+                        <hr class="container" style="max-width: 90%;">
+                        <div class="posts about-me">
+                            <h3>DurjoyZen is live now</h3>
+                            <h5>July 30, 2021</h5>
+                            <img class="img-fluid" src="durjoyzen_banner.jpg" alt="photo">
+                        </div>
+                        <div class="posts about-me">
+                            <h3>Finally...</h3>
+                            <h5>July 30, 2021</h5>
+                            <p>
+                                Its 3:09 am and I'm still awake. Finally I've finished making durjoyZen. I tried my best
+                                for keeping it user-friendly. I have been coding for 3 hours without any fucking break.
+                                And now I'm Done. Tomorrow again the same JavaScript. Oh! <br>
+                                It's raining heavily outside. It's Friday. That means JUMMAH. But I think
+                                I will have a sound sleep and I don't want to be late. So, see ya!
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="grid-3 item shark-3" id="links" style="display: flex; justify-content: center; ">
+                    <div>
+                        <div class="side-navbar">
+                            <a href="index.html">Home</a>
+                            <a href="posts.html">Posts</a>
+                            <a href="about.html">About</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+
+                        <h3 style="padding-top: 20px; padding-bottom: 20px;">Social Media Links</h3>
+                        <a style="color:snow;" href="https://www.facebook.com/profile.php?id=100026140397005">Follow me
+                            at facebook</a><a href="https://www.facebook.com/profile.php?id=100026140397005"><img
+                                src="https://img.icons8.com/color/48/000000/facebook.png" /></a> <br>
+                        <a style="color:snow;" href="https://www.instagram.com/">Follow me at instagram</a><img
+                            src="https://img.icons8.com/fluency/48/000000/instagram-new.png" /></a> <br>
+                        <a style="color:snow;" href="https://www.instagram.com/">Follow me at twitter</a><a
+                            href="https://twitter.com"><img
+                                src="https://img.icons8.com/fluency/48/000000/twitter.png" /></a> <br>
+                        <a style="color: snow;" href="https://whatsapp.com">Contact me at whatsapp</a><a
+                            href="https://whatsapp.com"><img src="https://img.icons8.com/fluency/48/000000/whatsapp.png"
+                                width="40px" /></a> <br>
+                        <a style="color: snow;" href="https://youtube.com">Subscribe at durjoyZen</a><a
+                            href="https://youtube.com"><img
+                                src="https://img.icons8.com/fluency/48/000000/youtube.png" /></a> <br>
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <footer class="container item footer" style="color: white; text-align: center;">
+        <p>
+            &copy;Copyright 2021 durjoyZen | Developed By Md. Abu Bakar Siddique | <a
+                href="abdurjoy2001@gmail.com">abdurjoy2001@gmail.com</a>
+        </p>
+
+    </footer>
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
